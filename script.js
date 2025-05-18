@@ -19,11 +19,6 @@ function openFeatures() {
 openFeatures()
 
 function toDoList() {
-    let form = document.querySelector('.addTask form')
-    let taskInput = document.querySelector('.addTask form input')
-    let taskDetailInput = document.querySelector('.addTask form textarea')
-    let taskCheckBox = document.querySelector('.addTask form #check')
-
 
     // let currentTask = [
     //     {
@@ -54,8 +49,8 @@ function toDoList() {
         currentTask.forEach((elem, id) => {
             // console.log(elem.detail);
             sum += `<div class="task">
-                        <h5>${elem.task}<span class="${elem.imp}">imp</span></h5>
-                        <button class="${id}">Mark as completed</button>
+                        <h5>${elem.task}<span class=${elem.imp}>imp</span></h5>
+                        <button id=${id}>Mark as completed</button>
                     </div>`
         })
 
@@ -67,7 +62,8 @@ function toDoList() {
 
         markCompletBtn.forEach((currElem) => {
             currElem.addEventListener('click', () => {
-                currentTask.splice(currElem.id,1)
+                currentTask.splice(currElem.id, 1)
+                // console.log(currElem.id);
                 renderTask()
             })
         })
@@ -75,18 +71,25 @@ function toDoList() {
 
     renderTask()
 
+    let form = document.querySelector('.addTask form')
+    let taskInput = document.querySelector('.addTask form input')
+    let taskDetailInput = document.querySelector('.addTask form textarea')
+    let taskCheckBox = document.querySelector('.addTask form #check')
+
+
     form.addEventListener('submit',(e) => {
         e.preventDefault()
 
         currentTask.push(
             {
-                task:taskInput.value,
-                detail:taskDetailInput.value,
-                imp:taskCheckBox.checked
+                task: taskInput.value,
+                detail: taskDetailInput.value,
+                imp: taskCheckBox.checked
             }
         )
 
         renderTask()
+
         taskInput.value = ''
         taskDetailInput.value = ''
         taskCheckBox.checked = false
