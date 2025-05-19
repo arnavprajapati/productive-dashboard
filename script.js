@@ -98,3 +98,17 @@ function toDoList() {
 }
 
 toDoList()
+
+let dayPlanner = document.querySelector('.day-planner')
+
+var hours = Array.from({ length: 18 }, (_, idx) => `${6 + idx}:00 - ${7 + idx}:00`)
+var wholeDaySum = ''
+hours.forEach((elem) => {
+    wholeDaySum += `
+        <div class="day-planner-time">
+            <p>${elem}</p>
+            <input type="text" placeholder="...">
+        </div>
+    `
+})
+dayPlanner.innerHTML = wholeDaySum

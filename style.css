@@ -108,7 +108,7 @@ section.allElem {
     padding: 30px 70px;
 }
 
-.fullElem p {
+.fullElem>p {
     position: absolute;
     font-size: 30px;
     color: black;
@@ -253,3 +253,49 @@ section.allElem {
     gap: 10px;
     padding-bottom: 20px;
 }
+
+.daily-planner-fullpage{
+    display: block;
+}
+
+.daily-planner-fullpage .day-planner{
+    width: 90%;
+    height: 80%;
+    margin-top: 14px;
+    background-color: var(--tri2);
+    margin-inline: auto;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    overflow: auto;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.daily-planner-fullpage .day-planner .day-planner-time{
+    display: flex;
+    position: relative;
+    width: 49%;
+    /* margin-bottom: 50px; */
+}
+.daily-planner-fullpage .day-planner .day-planner-time input{
+    color: var(--sec);
+    width: 100%;
+    height: 75px;
+    border: none;
+    outline: none;
+    font-size: 28px;
+    padding: 20px 35px;
+    padding-top: 50px;
+    border-radius: 10px;
+}
+.daily-planner-fullpage .day-planner .day-planner-time p{
+    color: var(--tri1);
+    position: absolute;
+    top: 12%;
+    left: 2%;
+    font-weight: 600;
+}
+

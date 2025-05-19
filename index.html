@@ -47,11 +47,11 @@
             <div class="todoContainer">
                 <div class="addTask">
                     <form action="">
-                        <input type="text" placeholder="Enter Task" id="task-input">
-                        <textarea name="" id="" placeholder="Enter Details"></textarea>
+                        <input type="text" placeholder="Enter Task" id="task-input" required>
+                        <textarea name="" id="" placeholder="Enter Details" required></textarea>
                         <div class="mark-imp">
                             <input type="checkbox" name="" id="check">
-                            <label for="">Mark as Important</label>
+                            <label for="check">Mark as Important</label>
                         </div>
                         <button>Add Task</button>
                     </form>
@@ -61,19 +61,30 @@
                 </div>
             </div>
         </section>
-        <section class="fullElem daily-planner">
+        <section class="fullElem daily-planner-fullpage">
             <p class="close" id="1">Close</p>
-            <h2>Daily Planner</h2>
+            <h2>Plan Your Day to be more Productive</h2>
+
+            <div class="day-planner">
+                <!-- <div class="day-planner-time">
+                    <p>6:00 - 7:00</p>
+                    <input type="text" placeholder="...">
+                </div>
+                <div class="day-planner-time">
+                    <p>6:00 - 7:00</p>
+                    <input type="text" placeholder="...">
+                </div> -->
+            </div>
         </section>
-        <section class="fullElem motivation">
+        <section class="fullElem motivation-fullpage">
             <p class="close" id="2">Close</p>
             <h2>Motivational</h2>
         </section>
-        <section class="fullElem promodoro">
+        <section class="fullElem promodoro-fullpage">
             <p class="close" id="3">Close</p>
             <h2>PromoDoro Timer</h2>
         </section>
-        <section class="fullElem daily-goal">
+        <section class="fullElem daily-goal-fullpage">
             <p class="close" id="4">Close</p>
             <h2>Daily Goals</h2>
         </section>
