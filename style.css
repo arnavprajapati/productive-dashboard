@@ -255,7 +255,7 @@ section.allElem {
 }
 
 .daily-planner-fullpage{
-    display: block;
+    /* display: block; */
 }
 
 .daily-planner-fullpage .day-planner{
